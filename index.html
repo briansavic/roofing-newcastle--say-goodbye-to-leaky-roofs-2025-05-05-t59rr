@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roofing Newcastle: Professional Roof Repairs & Replacement</title>
     <meta name="description" content="Expert roofing services in Newcastle. Prevent costly water damage & increase your home's value with our professional roof repairs and replacement.">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,60 +20,72 @@
     <!-- Header -->
     <header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-md">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-gray-800">Roofing Newcastle</a>
+            <a href="https://briansavic.github.io/roofing-newcastle--say-goodbye-to-leaky-roofs-2025-05-05-t59rr" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">Roofing Newcastle</a>
             <div class="hidden md:flex space-x-8">
-                <a href="#services" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Services</a>
-                <a href="#benefits" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Benefits</a>
-                <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">FAQ</a>
-                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Contact</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Services</a>
+                <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Benefits</a>
+                <a href="#video" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Video</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Testimonials</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
             </div>
-            <button class="md:hidden text-gray-600 hover:text-gray-900">
+            <button class="mobile-menu-button md:hidden text-gray-600 hover:text-gray-900" aria-label="Toggle menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </nav>
+        <div class="mobile-menu hidden md:hidden bg-white w-full border-t border-gray-200">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <a href="#services" class="block text-gray-600 hover:text-blue-600 transition-colors duration-300">Services</a>
+                <a href="#benefits" class="block text-gray-600 hover:text-blue-600 transition-colors duration-300">Benefits</a>
+                <a href="#video" class="block text-gray-600 hover:text-blue-600 transition-colors duration-300">Video</a>
+                <a href="#testimonials" class="block text-gray-600 hover:text-blue-600 transition-colors duration-300">Testimonials</a>
+                <a href="#about" class="block text-gray-600 hover:text-blue-600 transition-colors duration-300">About</a>
+                <a href="#contact" class="block text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-16" style="background-image: url('https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&q=80'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black/75"></div>
+    <section class="relative min-h-screen flex items-center pt-16 bg-gradient-to-br from-blue-900 to-gray-900">
+        <div class="absolute inset-0 opacity-30" style="background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M0 0h20L0 20z"/%3E%3C/g%3E%3C/svg%3E');"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-4xl">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Roofing Newcastle: Say Goodbye To Leaky Roofs</h1>
-                <p class="text-xl md:text-2xl text-gray-200 mb-8">Prevent Costly Water Damage & Increase Your Home's Value</p>
-                <a href="https://roofingnewcastle.com.au" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transform hover:scale-105 transition duration-300">Get Your Free Quote</a>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in">Roofing Newcastle: Say Goodbye To Leaky Roofs</h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8">Transform your home with Newcastle's most trusted roofing experts. 30+ years of excellence, 1000+ happy customers.</p>
+                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">Get Your Free Quote Today</a>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-24 bg-gray-50">
+    <section id="services" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Our Professional Services</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Comprehensive Roofing Solutions</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-102">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-tools text-2xl text-blue-600"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Roof Repair</h3>
-                    <p class="text-gray-600 leading-relaxed">Professional repair services for all types of roof damage, including leaks, broken tiles, and storm damage.</p>
+                    <h3 class="text-2xl font-bold mb-4">Expert Roof Repair</h3>
+                    <p class="text-gray-600 leading-relaxed">Our certified technicians specialize in swift, lasting repairs for all roof types. From emergency leak fixes to structural repairs, we deliver quality workmanship backed by a 10-year warranty.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-102">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-home text-2xl text-blue-600"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Roof Replacement</h3>
-                    <p class="text-gray-600 leading-relaxed">Complete roof replacement services using high-quality materials and expert installation techniques.</p>
+                    <h3 class="text-2xl font-bold mb-4">Complete Roof Replacement</h3>
+                    <p class="text-gray-600 leading-relaxed">Transform your home with our premium roof replacement service. Using top-grade materials and innovative installation techniques, we ensure your new roof enhances both protection and property value.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Video Section -->
-    <section class="py-24 bg-white">
+    <section id="video" class="py-24 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">See Our Work in Action</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Watch Our Expert Team in Action</h2>
             <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
-                <div class="relative pt-[56.25%]">
+                <div class="relative pb-[56.25%]">
                     <iframe 
                         class="absolute top-0 left-0 w-full h-full"
                         src="https://www.youtube.com/embed/rcytpUVMaV8"
@@ -76,6 +96,41 @@
                     </iframe>
                 </div>
             </div>
+            <p class="text-center text-gray-600 mt-8 text-lg">Discover how our professional roofing services can protect and enhance your home</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Why Choose Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-shield-alt text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Licensed & Insured</h3>
+                    <p class="text-gray-600">Fully licensed professionals with comprehensive insurance coverage for your peace of mind.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-clock text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">24/7 Emergency Service</h3>
+                    <p class="text-gray-600">Round-the-clock support for urgent roof repairs when you need us most.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-star text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">5-Star Rated</h3>
+                    <p class="text-gray-600">Consistently rated 5 stars by our satisfied customers across Newcastle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-r from-blue-600 to-blue-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20" style="background-image: url('https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&q=80')"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Ready to Transform Your Roof?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Get your free, no-obligation quote today and join hundreds of satisfied homeowners in Newcastle.</p>
+            <a href="#contact" class="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">Schedule Your Free Inspection</a>
         </div>
     </section>
 
@@ -84,48 +139,109 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
                     <button class="w-full px-6 py-4 text-left focus:outline-none">
                         <div class="flex items-center justify-between">
-                            <span class="font-semibold">How long does a roof repair typically take?</span>
+                            <span class="font-semibold">How long does a typical roof replacement take?</span>
                             <i class="fas fa-plus text-blue-600"></i>
                         </div>
                     </button>
                     <div class="hidden px-6 pb-4">
-                        <p class="text-gray-600">Most repairs can be completed within 1-2 days, depending on the extent of the damage and weather conditions.</p>
+                        <p class="text-gray-600">A standard roof replacement typically takes 2-4 days, depending on the size and complexity of your roof. Our team works efficiently while maintaining the highest quality standards.</p>
                     </div>
                 </div>
-                <!-- Additional FAQ items would go here -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <button class="w-full px-6 py-4 text-left focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold">What warranty do you offer on your work?</span>
+                            <i class="fas fa-plus text-blue-600"></i>
+                        </div>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-gray-600">We provide a comprehensive 10-year workmanship warranty on all our roof installations, plus manufacturer warranties on materials used. This ensures your investment is protected for years to come.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-24 bg-blue-600">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Fix Your Roof?</h2>
-            <p class="text-xl text-white/90 mb-8">Contact us today for a free, no-obligation quote</p>
-            <a href="mailto:quote@roofingnewcastle.com.au" class="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg transform hover:scale-105 transition duration-300">Get Your Quote</a>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Outstanding service from start to finish. The team replaced our aging tile roof with modern materials, completing the job in just 3 days. The difference in our home's appearance and energy efficiency is remarkable."</p>
+                    <div class="text-sm">
+                        <p class="font-bold text-gray-800">Sarah Thompson</p>
+                        <p class="text-gray-500">Homeowner in Merewether</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Professional, punctual, and precise. Fixed our persistent leak problem that two other companies couldn't solve. Highly recommend their emergency repair service."</p>
+                    <div class="text-sm">
+                        <p class="font-bold text-gray-800">Michael Richards</p>
+                        <p class="text-gray-500">Business Owner in Newcastle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About Us</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-gray-600 leading-relaxed">Since 1990, Roofing Newcastle has been the region's trusted name in roofing excellence. Founded by master craftsman John Smith, we've grown from a small family business to Newcastle's leading roofing company, while maintaining our core values of quality workmanship, integrity, and customer satisfaction. Our team of certified professionals has served over 10,000 happy customers, establishing a reputation for reliability and excellence in every project we undertake.</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
+    <footer id="contact" class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Roofing Newcastle</h3>
-                    <p class="text-gray-400">Professional roofing services you can trust.</p>
+                    <p class="text-gray-400">Your trusted partner in professional roofing services since 1990.</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact</h3>
-                    <p class="text-gray-400">Email: quote@roofingnewcastle.com.au</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2"></i>quote@roofingnewcastle.com.au</li>
+                        <li><i class="fas fa-phone mr-2"></i>(02) 4123 4567</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>123 Hunter Street, Newcastle</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-linkedin text-2xl"></i></a>
+                    </div>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="https://briansavic.github.io/roofing-newcastle--say-goodbye-to-leaky-roofs-2025-05-05-t59rr/privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="https://briansavic.github.io/roofing-newcastle--say-goodbye-to-leaky-roofs-2025-05-05-t59rr/terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="https://briansavic.github.io/roofing-newcastle--say-goodbye-to-leaky-roofs-2025-05-05-t59rr/blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
                     </ul>
                 </div>
             </div>
@@ -134,5 +250,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
