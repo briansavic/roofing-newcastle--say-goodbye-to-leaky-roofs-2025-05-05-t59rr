@@ -211,6 +211,97 @@
         </div>
     </div>
 </section>
+<!-- Calculator Section -->
+<section id="calculator-section" class="py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Roof Cost Calculator</h2>
+        <div class="max-w-lg mx-auto">
+<p class="text-center text-gray-600 mt-4 mb-12 max-w-2xl mx-auto text-lg">
+    <strong>Inputs:</strong> The calculator takes the roof size, cost per square foot for restoration, and cost per square foot for a new roof as inputs.<br>
+    <strong>Outputs:</strong> It calculates and displays the total cost for roof restoration, the total cost for a new roof, and the cost difference between the two options.
+</p>
+            <style>
+                .calculator-container {
+                    border: 1px solid #ccc;
+                    padding: 20px;
+                    border-radius: 8px; /* Slightly more rounded */
+                    background-color: #f9f9f9;
+                    margin-top: 20px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Added subtle shadow */
+                }
+                .calculator-container label {
+                    display: block;
+                    margin-top: 15px; /* Increased margin */
+                    margin-bottom: 5px;
+                    font-weight: 600; /* Tailwind semibold */
+                    color: #374151; /* Tailwind gray-700 */
+                    font-size: 0.875rem; /* Tailwind text-sm */
+                }
+                .calculator-container input[type="number"] {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    box-sizing: border-box;
+                    border: 1px solid #D1D5DB; /* Tailwind gray-300 */
+                    border-radius: 4px;
+                    font-size: 1rem; /* Tailwind text-base */
+                }
+                .calculator-container input[type="number"]:focus { /* Added focus style */
+                    border-color: #2563EB; /* Tailwind blue-600 */
+                    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* Tailwind focus ring */
+                    outline: none;
+                }
+                .calculator-container button {
+                    background-color: #2563EB; /* Tailwind blue-600 */
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 6px; /* Slightly more rounded */
+                    cursor: pointer;
+                    width: 100%;
+                    font-weight: 600; /* Tailwind semibold */
+                    font-size: 1rem; /* Tailwind text-base */
+                    transition: background-color 0.3s ease;
+                    margin-top: 10px; /* Added margin top */
+                }
+                .calculator-container button:hover {
+                    background-color: #1D4ED8; /* Tailwind blue-700 */
+                }
+                .calculator-container #resultCalc {
+                    margin-top: 25px; /* Increased margin */
+                    font-size: 1.125rem; /* Tailwind text-lg */
+                    font-weight: 600; /* Tailwind semibold */
+                    padding: 15px;
+                    background-color: #E5E7EB; /* Tailwind gray-200 */
+                    border-radius: 6px; /* Slightly more rounded */
+                    line-height: 1.7; /* Adjusted line-height */
+                    color: #1F2937; /* Tailwind gray-800 */
+                }
+                 .calculator-container #resultCalc span { /* Style for error message */
+                    color: #DC2626; /* Tailwind red-600 */
+                 }
+            </style>
+            <div class="calculator-container">
+                <h3 class="text-2xl font-semibold mb-6 text-center text-gray-700">Compare Your Roofing Options</h3>
+                
+                <label for="roofSizeCalc">Roof Size (square footage):</label>
+                <input type="number" id="roofSizeCalc" placeholder="E.g., 1500" class="text-gray-700">
+
+                <label for="restorationCostCalc">Cost per Square Foot for Restoration ($):</label>
+                <input type="number" id="restorationCostCalc" placeholder="E.g., 5.50" class="text-gray-700">
+
+                <label for="newRoofCostCalc">Cost per Square Foot for New Roof ($):</label>
+                <input type="number" id="newRoofCostCalc" placeholder="E.g., 8.00" class="text-gray-700">
+
+                <button onclick="calculateRoofCosts()">Calculate Costs</button>
+<button onclick="resetCalculator()" class="mt-2" style="background-color: #6B7280; /* Tailwind gray-500 */">Reset</button>
+
+                <div id="resultCalc"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Calculator Section -->
 
      <!-- Testimonials Section -->
 <section id="testimonials" class="py-24 bg-white">
@@ -501,6 +592,43 @@ Since 2015 we have been a professional sourcing business, connecting you with fu
         });
     }
 });
+
+function calculateRoofCosts() {
+    const roofSizeInput = document.getElementById('roofSizeCalc');
+    const restorationCostInput = document.getElementById('restorationCostCalc');
+    const newRoofCostInput = document.getElementById('newRoofCostCalc');
+    const resultDiv = document.getElementById('resultCalc');
+
+    const roofSize = parseFloat(roofSizeInput.value);
+    const restorationCost = parseFloat(restorationCostInput.value);
+    const newRoofCost = parseFloat(newRoofCostInput.value);
+
+    // Clear previous results or error messages
+    resultDiv.innerHTML = "";
+
+    if (isNaN(roofSize) || roofSize <= 0 ||
+        isNaN(restorationCost) || restorationCost < 0 ||
+        isNaN(newRoofCost) || newRoofCost < 0) {
+        resultDiv.innerHTML = "<span>Please enter valid positive numbers for all fields.</span>";
+        return;
+    }
+
+    const totalRestorationCost = roofSize * restorationCost;
+    const totalNewRoofCost = roofSize * newRoofCost;
+    const costDifference = totalNewRoofCost - totalRestorationCost;
+
+    resultDiv.innerHTML =
+        "Total Cost for Restoration: $" + totalRestorationCost.toFixed(2) + "<br>" +
+        "Total Cost for New Roof: $" + totalNewRoofCost.toFixed(2) + "<br>" +
+        "Cost Difference: $" + costDifference.toFixed(2);
+}
+
+function resetCalculator() {
+    document.getElementById('roofSizeCalc').value = '';
+    document.getElementById('restorationCostCalc').value = '';
+    document.getElementById('newRoofCostCalc').value = '';
+    document.getElementById('resultCalc').innerHTML = '';
+}
     </script>
 </body>
 </html>
